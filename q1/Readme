@@ -1,0 +1,9 @@
+Log file content explanantion-
+02:55:06:017,,VENDOR-STAT,XO,755
+XO - vendorname
+755 - connection
+
+1. Read the vendor.log file
+2. Create all the unique vendorfile names- example {vendorname}.log
+3. Sum all the connections and display the final output like below-
+VendorName: Airtel, TotalConnections: 7972
