@@ -1,0 +1,9 @@
+write a script to generate 10 random numbers
+
+usage:
+ ./function.sh  4
+30092
+24620
+32114
+19655
+
