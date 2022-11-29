@@ -1,23 +1,33 @@
 #! /bin/bash
 
+input() {
 echo -n "Enter the word which you want to replace: "
 read word
+}
 
-if grep -w $word words.txt > /dev/null 2>&1
-then
-    true
-else
-   echo "No such word is present in the file, please try again"
-   exit 1
-fi
+input
+
+until grep -w $word words.txt > /dev/null 2>&1
+do
+  echo "No such word is present in the file, please try again"
+  input
+done
+
+#if grep -w $word words.txt > /dev/null 2>&1
+#then
+#    true
+#else
+#   echo "No such word is present in the file, please try again"
+#   exit 1
+#fi
 
 echo -n "Enter the new word: "
 read newword
 
 echo "-------------------------------"
-echo "Content of file before replace"
+echo "Content of file before replace: "
 cat words.txt
 sed -i "s/$word/$newword/g" words.txt
 echo "-------------------------------"
-echo "Content of file after replace"
+echo "Content of file after replace: "
 cat words.txt
