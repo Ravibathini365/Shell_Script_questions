@@ -1,0 +1,7 @@
+script should take the numeric value as argument and sums the total
+
+usage:
+./count.sh 1 23 4 5  
+
+ouput should be :
+the sum of total passed numbers are 33
