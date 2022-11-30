@@ -9,7 +9,7 @@ do
    then 
         true
    else
-       grep $vendor vendor.log > ${VendorName}.log
+       grep $vendor vendor.log > ${vendor}.log
    fi
 done
 
