@@ -1,4 +1,4 @@
-i#! /bin/bash
+#! /bin/bash
 
 if [ ! "$1" ]
 then
@@ -13,17 +13,11 @@ fi
 
 >numstore.txt
 value=0
-while true
+until [ "$value" == "$1" ]
 do
-  if [ $value != "$1" ]
-  then
       echo $RANDOM >> numstore.txt
       value=`expr $value + 1`
-  elif [ $value == "$1" ]
-  then
-      cat numstore.txt
-      exit 1
-  fi
 done
 
+cat numstore.txt
 rm -f numstore.txt
