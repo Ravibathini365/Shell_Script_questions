@@ -1,6 +1,8 @@
-./calendar showdate
-showtime
-showday
-showmonth
-showyear
-
+ ./calendar.sh
+pass the args
+ ./calendar.sh showdate
+Today date is 6 !!
+ ./calendar.sh showmonth
+current month is Dec !!
+ ./calendar.sh showmonthdate
+Wrong input
